@@ -10,8 +10,8 @@ Gmail.connect(username, password) do |gmail|
   addresses.each do |address|
     email = gmail.compose do
       to address
-      subject "support@upguard.com - Daily Email Test"
-      body "Did you get this? This is a test for the following address - #{address}!"
+      subject "#{address} - Daily Email Test"
+      body "Did you get this? This is a test!"
     end
     email.deliver!
   end
