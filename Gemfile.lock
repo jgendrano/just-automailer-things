@@ -2,6 +2,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     coderay (1.1.1)
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
     figaro (1.1.1)
       thor (~> 0.14)
     gmail (0.6.0)
@@ -9,19 +11,33 @@ GEM
       mail (>= 2.2.1)
     gmail_xoauth (0.4.1)
       oauth (>= 0.3.6)
+    hashie (3.4.4)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
+    inflection (1.0.0)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    multi_xml (0.5.5)
+    multipart-post (2.0.0)
     oauth (0.5.1)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    scrub_rb (1.0.1)
     slop (3.6.0)
     thor (0.19.1)
+    zendesk_api (1.14.0)
+      faraday (~> 0.9)
+      hashie (>= 1.2, < 4.0, != 3.3.0)
+      inflection
+      mime-types
+      multipart-post (~> 2.0)
+      scrub_rb (~> 1.0.1)
 
 PLATFORMS
   ruby
@@ -29,7 +45,9 @@ PLATFORMS
 DEPENDENCIES
   figaro
   gmail
+  httparty
   pry
+  zendesk_api
 
 BUNDLED WITH
    1.12.5
